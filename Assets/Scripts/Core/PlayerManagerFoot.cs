@@ -8,6 +8,8 @@ public class PlayerManagerFoot : MonoBehaviour
 
     public static PlayerManagerFoot instance;
     public static GameObject player;
+    public int touche = 0;
+    [SerializeField] UIManager uiManager;
 
     void Awake()
     {
@@ -16,6 +18,7 @@ public class PlayerManagerFoot : MonoBehaviour
             instance = this;
         }
     }
+    
 
     public static GameObject GetPlayer()
     {
@@ -40,6 +43,16 @@ public class PlayerManagerFoot : MonoBehaviour
     {
 
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other) 
+    {if (other.tag == "Obstacle")
+        {
+            Debug.Log("test");
+            touche++;
+            uiManager.UpdateText();
+            Destroy(other.gameObject);
+        } 
     }
 
     void FixedUpdate()
