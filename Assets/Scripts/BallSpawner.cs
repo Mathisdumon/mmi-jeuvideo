@@ -10,24 +10,32 @@ public class BallSpawner : MonoBehaviour
     private float departEnY;
     public int nbBallonRestant;
 
-    void Start()
+    private bool ballonCreated = false;
+
+    void Update()
     {
-        ApparaitreBallon();
+        if (!ballonCreated && nbBallonRestant <= 9)
+        {
+            ballonCreated = true;
+            nbBallonRestant++;
+            ApparaitreBallon();
+        }
     }
 
     public void ApparaitreBallon()
     {
+        // faire en sorte que le ballon apparaîsse aléatoirement en Y au début 
+        nbAleatoireEnYDebut = Random.Range(-8.2f, 4.2f);
+        departEnY = nbAleatoireEnYDebut;
+        departEnX = 8;
+        gameObject.transform.position = new Vector2(departEnX, departEnY);
 
-        if (nbBallonRestant == 0 && nbBallonRestant <= 10)
-        {
-            // faire en sorte que le ballon apparaîsse aléatoirement en Y au début 
-            nbAleatoireEnYDebut = Random.Range(-8.2f, 4.2f);
-            departEnY = nbAleatoireEnYDebut;
-            departEnX = 8;
-            gameObject.transform.position = new Vector2(departEnX, departEnY);
+        // Instancier un nouveau ballon à la position de départ
+        GameObject nouveauBallon = Instantiate(ballonPrefab, new Vector2(8, departEnY), Quaternion.identity);
+    }
 
-            // Instancier un nouveau ballon à la position de départ
-            GameObject nouveauBallon = Instantiate(ballonPrefab, new Vector2(8, departEnY), Quaternion.identity);
-        }
+    public void CreateNewBallon()
+    {
+        ballonCreated = false;
     }
 }

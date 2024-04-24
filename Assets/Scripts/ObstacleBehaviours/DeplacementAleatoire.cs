@@ -14,7 +14,7 @@ public class DeplacementAleatoire : MonoBehaviour
 
 
     // Vitesse de déplacement du ballon
-    public float vitesse = 20f;
+    private float vitesse;
     public float vitesseAleatoire;
 
     // Booléen pour indiquer si le ballon est en mouvement
@@ -22,6 +22,7 @@ public class DeplacementAleatoire : MonoBehaviour
 
     void Start()
     {
+        vitesse = Random.Range(8f, 15f);
         ballSpawner = GameObject.Find("BallSpawner").GetComponent<BallSpawner>();
         // faire en sorte que le ballon aie des coordonnées aléatoire pour qu'il aille dans vers ces coordonnées
         nbAleatoireEnYFin = Random.Range(-4.3f, 4.3f);
@@ -49,10 +50,9 @@ public class DeplacementAleatoire : MonoBehaviour
             {
                 // Arrêter le mouvement du ballon
                 enMouvement = false;
-                ballSpawner.nbBallonRestant = ballSpawner.nbBallonRestant--;
 
                 // revoir la partie qui suit
-                ballSpawner.ApparaitreBallon();
+                ballSpawner.CreateNewBallon();
                 Destroy(gameObject);
 
             }
