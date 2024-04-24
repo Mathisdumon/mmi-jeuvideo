@@ -5,13 +5,13 @@ using UnityEngine;
 public class DeplacementAleatoire : MonoBehaviour
 {
 
-    private float nbAleatoireEnYDebut;
-    private float departEnX;
-    private float departEnY;
     private float nbAleatoireEnYFin;
     private float finEnY;
     private float finEnX;
-    private float nbBallonRestant = 10;
+
+    BallSpawner ballSpawner;
+
+
 
     // Vitesse de déplacement du ballon
     public float vitesse = 5.0f;
@@ -21,12 +21,7 @@ public class DeplacementAleatoire : MonoBehaviour
 
     void Start()
     {
-        // faire en sorte que le ballon apparaîsse aléatoirement en Y au début 
-        nbAleatoireEnYDebut = Random.Range(-8.2f, 4.2f);
-        departEnY = nbAleatoireEnYDebut;
-        departEnX = 8;
-        gameObject.transform.position = new Vector2(departEnX, departEnY);
-
+        ballSpawner = GameObject.Find("BallSpawner").GetComponent<BallSpawner>();
         // faire en sorte que le ballon aie des coordonnées aléatoire pour qu'il aille dans vers ces coordonnées
         nbAleatoireEnYFin = Random.Range(-4.3f, 4.3f);
         finEnY = nbAleatoireEnYFin;
@@ -34,7 +29,6 @@ public class DeplacementAleatoire : MonoBehaviour
 
         // Démarrer le déplacement du ballon
         enMouvement = true;
-
 
     }
 
@@ -52,13 +46,15 @@ public class DeplacementAleatoire : MonoBehaviour
             {
                 // Arrêter le mouvement du ballon
                 enMouvement = false;
-                nbBallonRestant = nbBallonRestant - 1;
+                ballSpawner.nbBallonRestant = ballSpawner.nbBallonRestant--;
 
                 // revoir la partie qui suit
+                ballSpawner.ApparaitreBallon();
                 Destroy(gameObject);
 
-                // GameObject nouveauBallon = Instantiate(prefab, position, rotation);
             }
         }
     }
+
+    // Méthode pour faire apparaître un nouveau ballon
 }
