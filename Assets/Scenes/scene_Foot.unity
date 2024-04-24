@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nbPoint: 0
+  uiManagerFoot: {fileID: 1636149857}
   hud: {fileID: 0}
   audioManager: {fileID: 0}
   _moveSpeed: 5
