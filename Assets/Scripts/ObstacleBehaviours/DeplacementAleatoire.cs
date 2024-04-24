@@ -14,7 +14,8 @@ public class DeplacementAleatoire : MonoBehaviour
 
 
     // Vitesse de déplacement du ballon
-    public float vitesse = 5.0f;
+    public float vitesse = 20f;
+    public float vitesseAleatoire;
 
     // Booléen pour indiquer si le ballon est en mouvement
     private bool enMouvement = false;
@@ -27,9 +28,11 @@ public class DeplacementAleatoire : MonoBehaviour
         finEnY = nbAleatoireEnYFin;
         finEnX = -8.5f;
 
+        // // Définir une vitesse aléatoire entre vitesseMin et vitesseMax
+        // float vitesseAleatoire = Random.Range(vitesseMin, vitesseMax);
+
         // Démarrer le déplacement du ballon
         enMouvement = true;
-
     }
 
     void Update()

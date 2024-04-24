@@ -25,9 +25,10 @@ public class Impact : MonoBehaviour
 			// col.gameObject.transform.position = TableauManager.GetCheckpointPosition();
 
 			//On augmente de 1 le compteur de morts
+			//On récupère le PlayerManager du joueur pour ajouter des points 
 			col.gameObject.GetComponent<PlayerManagerFoot>().AddPoint(); //On récupère le PlayerManager du joueur pour ajouter des points 
-
-			//On immobilise le joueur pendant 0.5 s
+																		 // col.gameObject.GetComponent<PlayerManager>().AddDeath();
+																		 //On immobilise le joueur pendant 0.5 s
 			PlayerManager.SetFreeze(0.5f);
 		}
 	}
