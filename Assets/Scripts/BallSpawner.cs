@@ -17,6 +17,7 @@ public class BallSpawner : MonoBehaviour
 
     public void ApparaitreBallon()
     {
+
         if (nbBallonRestant == 0 && nbBallonRestant <= 10)
         {
             // faire en sorte que le ballon apparaîsse aléatoirement en Y au début 
