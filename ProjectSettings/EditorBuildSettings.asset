@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnimatedSpritesTest.unity
     guid: cce1e654cbe2e7a41922c22cf075c342
+  - enabled: 1
+    path: Assets/Scenes/scene_regle_foot.unity
+    guid: 6e940f0a7d246fe47bb9faaefb39e7a1
+  - enabled: 1
+    path: Assets/Scenes/scene_Foot.unity
+    guid: 03d075a13e60fc741a51229ce3a44557
   m_configObjects: {}
