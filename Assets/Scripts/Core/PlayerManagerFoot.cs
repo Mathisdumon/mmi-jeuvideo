@@ -20,7 +20,7 @@ public class PlayerManagerFoot : MonoBehaviour
             instance = this;
         }
     }
-    
+
 
     public static GameObject GetPlayer()
     {
@@ -47,29 +47,30 @@ public class PlayerManagerFoot : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other) 
-    {if (other.tag == "Obstacle")
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Obstacle")
         {
-           // if (invincibilityTimer <= 0)
-           // {
+            // if (invincibilityTimer <= 0)
+            // {
             touche++;
             uiManager.UpdateText();
             Destroy(other.gameObject);
-           /*  invincibilityTimer = invincibilityTime;
-            StartCoroutine(InvincibilityCountdown());
-            } */
-        } 
-    }
-
-   /*     IEnumerator InvincibilityCountdown()
-    {
-        while (invincibilityTimer > 0)
-        {
-            invincibilityTimer -= Time.deltaTime;
-            yield return null;
+            /*  invincibilityTimer = invincibilityTime;
+             StartCoroutine(InvincibilityCountdown());
+             } */
         }
     }
-    */
+
+    /*     IEnumerator InvincibilityCountdown()
+     {
+         while (invincibilityTimer > 0)
+         {
+             invincibilityTimer -= Time.deltaTime;
+             yield return null;
+         }
+     }
+     */
 
     void FixedUpdate()
     {

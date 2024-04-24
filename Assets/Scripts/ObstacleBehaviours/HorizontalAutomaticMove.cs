@@ -9,12 +9,14 @@ public class HorizontalAutomaticMove : MonoBehaviour
 	private Vector2 movement;
 
 	//Au démarrage, défini la variable de mouvement
-	void Start(){
+	void Start()
+	{
 		movement = new Vector2(xSens, 0);
 	}
 
 	//A chaque frame, on bouge l'objet via son rigidbody dans le mouvement défini * la vitesse de l'objet moveSpeed * Time.fixedDeltaTime le laps de temps écoulé en 1 frame
-	void FixedUpdate() {
+	void FixedUpdate()
+	{
 		transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
 	}
 }
