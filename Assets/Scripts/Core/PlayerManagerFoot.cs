@@ -8,6 +8,8 @@ public class PlayerManagerFoot : MonoBehaviour
 
     public static PlayerManagerFoot instance;
     public static GameObject player;
+    public int nbPoint = 0;
+    [SerializeField] UIManagerFoot uiManagerFoot;
 
     void Awake()
     {
@@ -16,6 +18,7 @@ public class PlayerManagerFoot : MonoBehaviour
             instance = this;
         }
     }
+
 
     public static GameObject GetPlayer()
     {
@@ -40,6 +43,17 @@ public class PlayerManagerFoot : MonoBehaviour
     {
 
 
+    }
+
+    public void AddPoint()
+    {
+        nbPoint++;
+        uiManagerFoot.UpdateText();
+        if (hud != null)
+        {
+            hud.updateScoreText(nbPoint);
+        }
+        Debug.Log("Nombre de points : " + nbPoint);
     }
 
     void FixedUpdate()
