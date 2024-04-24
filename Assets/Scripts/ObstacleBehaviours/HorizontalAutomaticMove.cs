@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HorizontalAutomaticMove : MonoBehaviour
 {
-	[SerializeField] private float moveSpeed = 5f; //Vitesse de l'objet, modifiable
+	[SerializeField] private float moveSpeed = 20f; //Vitesse de l'objet, modifiable
 	[SerializeField] private int xSens = 1; //Le sens de l'objet (1 si en bas, -1 si en haut)
 	private Vector2 movement;
 

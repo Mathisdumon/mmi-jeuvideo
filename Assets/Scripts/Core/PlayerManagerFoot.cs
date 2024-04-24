@@ -6,6 +6,8 @@ public class PlayerManagerFoot : MonoBehaviour
 {
     //Singleton, permet de n'avoir qu'une seule et unique instance de l'objet
 
+    // public float invincibilityTime = 2.0f; // Time in seconds the player is invincible after hitting an obstacle
+    // private float invincibilityTimer;
     public static PlayerManagerFoot instance;
     public static GameObject player;
     public int touche = 0;
@@ -48,12 +50,26 @@ public class PlayerManagerFoot : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) 
     {if (other.tag == "Obstacle")
         {
-            Debug.Log("test");
+           // if (invincibilityTimer <= 0)
+           // {
             touche++;
             uiManager.UpdateText();
             Destroy(other.gameObject);
+           /*  invincibilityTimer = invincibilityTime;
+            StartCoroutine(InvincibilityCountdown());
+            } */
         } 
     }
+
+   /*     IEnumerator InvincibilityCountdown()
+    {
+        while (invincibilityTimer > 0)
+        {
+            invincibilityTimer -= Time.deltaTime;
+            yield return null;
+        }
+    }
+    */
 
     void FixedUpdate()
     {
@@ -65,6 +81,5 @@ public class PlayerManagerFoot : MonoBehaviour
 
         //Si le chronomètre n'est pas arrêté, on ajoute le laps de temps écoulé au chronomètre et on actualise le HUD
         _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime);
-
     }
 }
