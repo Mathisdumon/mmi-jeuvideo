@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerManagerSurf : MonoBehaviour
 {
     //Singleton, permet de n'avoir qu'une seule et unique instance de l'objet
@@ -82,7 +81,6 @@ public class PlayerManagerSurf : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(game_over);
         if(!game_over){
             //On récupère si les touches de directions horizontales et verticales sont pressées, cela donne un nombre entre 0 (pas pressé) et 1 (pressé).
             _movement.y = Input.GetAxisRaw("Vertical");
@@ -102,5 +100,17 @@ public class PlayerManagerSurf : MonoBehaviour
         uiManager.ShowGameOverScreen();
         //get elements with tag obstacle, 
         
+    }
+
+    public void ShowMedaille(){
+        if(touche == 0){
+            uiManager.showMedailleScreen(1);
+        } else if(touche == 1){
+            uiManager.showMedailleScreen(2);
+        } else if(touche == 2){
+             uiManager.showMedailleScreen(3);
+        } else {
+             GameOver();
+        }
     }
 }

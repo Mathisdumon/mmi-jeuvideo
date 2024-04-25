@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] TMP_Text toucheTexte;
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] GameObject endPanel;
     
     PlayerManagerSurf playerManager;
 
@@ -33,5 +34,10 @@ public class UIManager : MonoBehaviour
     {
         PlayerManagerSurf.game_over = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void showMedailleScreen(int medaille){
+        endPanel.SetActive(true);
+        endPanel.GetComponent<Medailles>().showMedaille(medaille);
     }
 }
