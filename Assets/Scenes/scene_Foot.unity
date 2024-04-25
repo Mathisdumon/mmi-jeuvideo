@@ -840,7 +840,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1983306072620503304, guid: c645055b3332f9c4db776ff49b792d76, type: 3}
   m_PrefabInstance: {fileID: 1587832012}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1208461461
+--- !u!114 &1208461465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208461455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20e71e9ddb92412478b9449341f184b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dda1da7a90c657418b0c23518288308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nbPoint: 0
@@ -1015,7 +1015,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7558360764163165843, guid: c645055b3332f9c4db776ff49b792d76, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1208461461}
+      addedObject: {fileID: 1208461465}
   m_SourcePrefab: {fileID: 100100000, guid: c645055b3332f9c4db776ff49b792d76, type: 3}
 --- !u!1 &1636149856
 GameObject:
