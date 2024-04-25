@@ -15,11 +15,56 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneToEdit.unity
     guid: ac569781d3b56b547b22c4e20ba02b7f
   - enabled: 1
+    path: Assets/Scenes/histoire_regle_foot/regle_foot.unity
+    guid: ced6ed75ee6fe344aab51ed1fbf249f9
+  - enabled: 1
     path: Assets/Scenes/SceneEmpty.unity
     guid: b4b78321182d1ed4fb403a87cca015ba
   - enabled: 1
+    path: Assets/Scenes/scene_regle_surf.unity
+    guid: 009336b9ed2f9bd4298030084a5de4ac
+  - enabled: 1
     path: Assets/Scenes/AnimatedSpritesTest.unity
     guid: cce1e654cbe2e7a41922c22cf075c342
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_surf/regle_surf.unity
+    guid: ea9ab461cd8b99744863ce3c96e851dd
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_surf/histoire_5_surf.unity
+    guid: c85f70b6176af3d458d6bd808d53064a
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_surf/histoire_4_surf.unity
+    guid: 3757bafb98c2d3a44a78d497001e7172
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_surf/histoire_2_surf.unity
+    guid: 617a9bf620bfedc4e8e6a53c155b89c3
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_surf/histoire_3_surf.unity
+    guid: 0353dc3863a623449a1d328ca831cd18
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_surf/histoire_1_surf.unity
+    guid: 951e3f8825451cd4c953a082676fe107
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_surf/commande_surf.unity
+    guid: 3f5cdf3069357c342b48fc5d51cd20ad
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_foot/commande_foot.unity
+    guid: 1667807fbeafcbb488799760bc0f1b2f
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_foot/histoire_5_foot.unity
+    guid: 43adc4e146c408f4d8f2ba7370e6bd37
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_foot/histoire_4_foot.unity
+    guid: 6b32487c577cfea489d61691f301654c
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_foot/histoire_3_foot.unity
+    guid: 5528967d7e5cb704497bb821da1c20cf
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_foot/histoire_2_foot.unity
+    guid: d2728b3c0bc39f547aa8464d260a6028
+  - enabled: 1
+    path: Assets/Scenes/histoire_regle_foot/histoire_1_foot.unity
+    guid: 30a96cdf61a47fd4b9329226907245a6
   - enabled: 1
     path: Assets/Scenes/scene_maps_challenge.unity
     guid: ea2f83bcdc166f242b9d959bf0659ed8
@@ -33,6 +78,9 @@ EditorBuildSettings:
     path: Assets/Scenes/scene_Foot.unity
     guid: 03d075a13e60fc741a51229ce3a44557
   - enabled: 1
+    path: Assets/Scenes/scene_surf.unity
+    guid: 4ef43fcd127a9134f99fea6b537c9ee0
+  - enabled: 1
     path: Assets/Scenes/scene_regle_principale.unity
     guid: 5708de8ef5d46ed4580e1c42a10a51c8
   - enabled: 1
@@ -41,6 +89,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scene_challenge.unity
     guid: d6189f8deb913b2439e8e9b500d7a848
+  - enabled: 1
+    path: Assets/Scenes/scene_affiche_surf.unity
+    guid: bb80d651968fa1342a208e94647ac19c
   - enabled: 1
     path: Assets/Scenes/scene_map_culture.unity
     guid: a9d50208576733549991a9d675f5b488
