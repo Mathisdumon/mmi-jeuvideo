@@ -22,7 +22,7 @@ public class GenerateObstaclesSurf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerObstacle <= 0 && nbObstacles > 0 && !PlayerManagerFoot.game_over)
+        if (timerObstacle <= 0 && nbObstacles > 0 && !PlayerManagerSurf.game_over)
         { //Si timerObstacle est inférieur ou égal à 0, on génère un obstacle à une position y aléatoire et on remet timerObstacle = à obstacleDelay
             float departEnY = Random.Range(-4f, 4f);
 
@@ -58,8 +58,12 @@ public class GenerateObstaclesSurf : MonoBehaviour
             obstacle.transform.parent = this.gameObject.transform; //on met l'objet généré dans l'objet OBsracles qui bouge à droite
             //on remet timerObstacle = à obstacleDelay
             timerObstacle = obstacleDelay;
-        } else if (timerObstacle <= 0 && nbObstacles == 0 && !PlayerManagerFoot.game_over)
+        } else if (timerObstacle <= 0 && nbObstacles == 0 && !PlayerManagerSurf.game_over)
         { 
+            //générer la ligne d'arrivée
+
+            //Si on touche la ligne d'arrivée, il faut regarder la variable qui contient le nombre d'obstacles touchés
+            // et afficher la médaille selon les cas
         }
         else
         {

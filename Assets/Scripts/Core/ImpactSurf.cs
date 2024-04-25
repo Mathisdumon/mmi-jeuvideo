@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Impact : MonoBehaviour
+public class ImpactSurf : MonoBehaviour
 {
 	//Si lors d'un niveau, il faut réinitialiser la position de certains obstacles : mettre un tableauReinit à votre tableau et mettre la liste des FollowingPlayerMove à réinitialiser
 	//Mettre le tableauReinit dans tous les objets avec un impact dans le tableau

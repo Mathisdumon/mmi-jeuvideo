@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManagerFoot : MonoBehaviour
+public class PlayerManagerSurf : MonoBehaviour
 {
     //Singleton, permet de n'avoir qu'une seule et unique instance de l'objet
 
@@ -11,7 +11,7 @@ public class PlayerManagerFoot : MonoBehaviour
     public GameOverScreen gameOverScreen;
 
     public GameObject objectToShowAndHide;
-    public static PlayerManagerFoot instance;
+    public static PlayerManagerSurf instance;
     public static GameObject player;
     public int touche = 0;
 

@@ -9,20 +9,20 @@ public class UIManager : MonoBehaviour
     [SerializeField] TMP_Text toucheTexte;
     [SerializeField] GameObject gameOverPanel;
     
-    PlayerManagerFoot playerManagerFoot;
+    PlayerManagerSurf playerManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerManagerFoot = GameObject.Find("Surfer").GetComponent<PlayerManagerFoot>();
-        toucheTexte.text = playerManagerFoot.touche.ToString();
+        playerManager = GameObject.Find("Surfer").GetComponent<PlayerManagerSurf>();
+        toucheTexte.text = playerManager.touche.ToString();
         gameOverPanel.SetActive(false); //on le cache au début
     }
 
 
     public void UpdateText()
     {
-        toucheTexte.text = playerManagerFoot.touche.ToString();
+        toucheTexte.text = playerManager.touche.ToString();
     }
 
     public void ShowGameOverScreen(){
@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
-        PlayerManagerFoot.game_over = false;
+        PlayerManagerSurf.game_over = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     // Exemple d'utilisation :
     void Update()
     {
-        if(!PlayerManagerFoot.game_over){
+        if(!PlayerManagerSurf.game_over){
         // Obtient l'entrée verticale
         float verticalInput = Input.GetAxis("Vertical");
 
