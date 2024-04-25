@@ -2322,10 +2322,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: gold
       objectReference: {fileID: 0}
-    - target: {fileID: 196640272538952677, guid: 5b5b807c300f6d849b802596a82c953e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5937977883414074184, guid: 5b5b807c300f6d849b802596a82c953e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -944.6
@@ -2489,10 +2485,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bronze
       objectReference: {fileID: 0}
-    - target: {fileID: 8026143873467186232, guid: 26865a931edd1324aaf88f7d55a93988, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2509,10 +2501,6 @@ PrefabInstance:
     - target: {fileID: 4309811302061296862, guid: 5898fcd2f9745204ba846030c42f62ff, type: 3}
       propertyPath: m_Name
       value: silver
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309811302061296862, guid: 5898fcd2f9745204ba846030c42f62ff, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6554338637119670533, guid: 5898fcd2f9745204ba846030c42f62ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2610,14 +2598,6 @@ PrefabInstance:
     - target: {fileID: 8816265120952429987, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
       propertyPath: m_Name
       value: arrived
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816265120952429987, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816265120952429987, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
-      propertyPath: m_TagString
-      value: win
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
