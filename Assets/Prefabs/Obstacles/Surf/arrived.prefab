@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 3787489805499138346}
   m_Layer: 0
   m_Name: arrived
-  m_TagString: Untagged
+  m_TagString: win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &971739300312754525
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8816265120952429987}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.5, y: -6.1800003, z: 0}
   m_LocalScale: {x: 3.1117132, y: 3.6533127, z: 0.3299}
   m_ConstrainProportionsScale: 0
@@ -143,3 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99eb604ea6bb33c46bedc0d3f697b519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: {fileID: 0}
+  silver: {fileID: 0}
+  bronze: {fileID: 0}
