@@ -19,16 +19,19 @@ public class VerticalMoveShark : MonoBehaviour
 	//A chaque frame, on bouge l'objet via son rigidbody dans le mouvement défini * la vitesse de l'objet moveSpeed * Time.fixedDeltaTime le laps de temps écoulé en 1 frame
 	void FixedUpdate()
 	{
-		transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
-		//Debug.Log(transform.position.y + " " + limit);
-		if (transform.position.y > limit)
-		{
-			movement = new Vector2(0, -1);
+		if(!PlayerManagerFoot.game_over){
+			transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
+			//Debug.Log(transform.position.y + " " + limit);
+			if (transform.position.y > limit)
+			{
+				movement = new Vector2(0, -1);
+			}
+			else if (transform.position.y < -limit)
+			{
+				movement = new Vector2(0, 1);
+			}
 		}
-		else if (transform.position.y < -limit)
-		{
-			movement = new Vector2(0, 1);
-		}
+		
 
 	}
 }

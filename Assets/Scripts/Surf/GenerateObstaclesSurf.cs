@@ -9,7 +9,6 @@ public class GenerateObstaclesSurf : MonoBehaviour
     [SerializeField] private GameObject requin;
     private float obstacleDelay = 2f; // tous les x secondes, on génère un obstacle
     private float timerObstacle = 0f;
-
     private int nbObstacles = 0; //Compteur d'obstacles générés
 
     // Start is called before the first frame update
@@ -21,7 +20,7 @@ public class GenerateObstaclesSurf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerObstacle <= 0)
+        if (timerObstacle <= 0 && !PlayerManagerFoot.game_over)
         { //Si timerObstacle est inférieur ou égal à 0, on génère un obstacle à une position y aléatoire et on remet timerObstacle = à obstacleDelay
             float departEnY = Random.Range(-4f, 4f);
 
@@ -32,7 +31,7 @@ public class GenerateObstaclesSurf : MonoBehaviour
             int tirage = Random.Range(min, max);
 
             // Instancie soit un rocher soit un requin en fonction du tirage
-            GameObject obstacle; // Declare 'obstacle' outside the 'if' statement
+            GameObject obstacle; 
             if (tirage == 1)
             {
                 obstacle = Instantiate(rocher, new Vector2(8, departEnY), Quaternion.identity);
