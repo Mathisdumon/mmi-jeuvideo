@@ -21,9 +21,24 @@ EditorBuildSettings:
     path: Assets/Scenes/AnimatedSpritesTest.unity
     guid: cce1e654cbe2e7a41922c22cf075c342
   - enabled: 1
+    path: Assets/Scenes/scene_maps_challenge.unity
+    guid: ea2f83bcdc166f242b9d959bf0659ed8
+  - enabled: 1
     path: Assets/Scenes/scene_regle_foot.unity
     guid: 6e940f0a7d246fe47bb9faaefb39e7a1
   - enabled: 1
     path: Assets/Scenes/scene_Foot.unity
     guid: 03d075a13e60fc741a51229ce3a44557
+  - enabled: 1
+    path: Assets/Scenes/scene_regle_principale.unity
+    guid: 5708de8ef5d46ed4580e1c42a10a51c8
+  - enabled: 1
+    path: Assets/Scenes/scene_choix_jeu.unity
+    guid: 8f69eed9b4596874d94a0036e8ab0822
+  - enabled: 1
+    path: Assets/Scenes/scene_challenge.unity
+    guid: d6189f8deb913b2439e8e9b500d7a848
+  - enabled: 1
+    path: Assets/Scenes/scene_map_culture.unity
+    guid: a9d50208576733549991a9d675f5b488
   m_configObjects: {}

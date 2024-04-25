@@ -53,6 +53,7 @@ public class DeplacementAleatoire : MonoBehaviour
 
                 // revoir la partie qui suit
                 ballSpawner.CreateNewBallon();
+                ballSpawner.nbBallonRestant++;
                 Destroy(gameObject);
 
             }

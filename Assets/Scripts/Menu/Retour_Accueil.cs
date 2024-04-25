@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu_mimi_jeu_foot : MonoBehaviour
+public class Retour_Accueil : MonoBehaviour
 {
-    public void PlayGame()
+    public void RetourAccueil()
     {
         //Mettre entre guillemets le nom de la scène vers laquelle charger
         //Pour utiliser SceneManager, il faut impérativement rajouter "using UnityEngine.SceneManagement;" en haut du script.
-        SceneManager.LoadScene("Scene_Foot");
+        SceneManager.LoadScene("TitleMenu");
     }
 }

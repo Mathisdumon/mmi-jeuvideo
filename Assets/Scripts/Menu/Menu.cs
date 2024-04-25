@@ -25,75 +25,75 @@ public class Menu : MonoBehaviour
 	void Start()
 	{
 		//On crée une variable qui compte combien d'objets enfants possède le groupe qui contient les images des règles.
-		int children_group_rules = _picturesGroupRules.transform.childCount;
+		// int children_group_rules = _picturesGroupRules.transform.childCount;
 
 		//On initialise le tableau de l'attribut _picturesRules avec la taille du nombre d'images
-		_picturesRules = new GameObject[children_group_rules];
+		// _picturesRules = new GameObject[children_group_rules];
 
 		//On parcourt tous les enfants du groupe objet avec une boucle, on les insère dans le tableau, et on les désactive
-		for (int i = 0; i < children_group_rules; ++i)
-		{
-			_picturesRules[i] = _picturesGroupRules.transform.GetChild(i).gameObject;
-			_picturesRules[i].SetActive(false);
-		}
+		// for (int i = 0; i < children_group_rules; ++i)
+		// {
+		// 	_picturesRules[i] = _picturesGroupRules.transform.GetChild(i).gameObject;
+		// 	_picturesRules[i].SetActive(false);
+		// }
 
 		//On désactive le groupe qui contient les images
-		_picturesGroupRules.SetActive(false);
+		// _picturesGroupRules.SetActive(false);
 
 
-		//On fait la même chose pour les crédits
-		int children_group_credits = _picturesGroupCredits.transform.childCount;
-		_picturesCredits = new GameObject[children_group_credits];
+		// //On fait la même chose pour les crédits
+		// int children_group_credits = _picturesGroupCredits.transform.childCount;
+		// _picturesCredits = new GameObject[children_group_credits];
 
-		for (int i = 0; i < children_group_credits; ++i)
-		{
-			_picturesCredits[i] = _picturesGroupCredits.transform.GetChild(i).gameObject;
-			_picturesCredits[i].SetActive(false);
-		}
+		// for (int i = 0; i < children_group_credits; ++i)
+		// {
+		// 	_picturesCredits[i] = _picturesGroupCredits.transform.GetChild(i).gameObject;
+		// 	_picturesCredits[i].SetActive(false);
+		// }
 
-		_picturesGroupCredits.SetActive(false);
+		// _picturesGroupCredits.SetActive(false);
 	}
 
 	// Fonction qui se lance à chaque frame.
-	void Update()
-	{
+	// void Update()
+	// {
 
-		//Si on est en train de lire les règles
-		if (_readingRules > 0)
-		{
-			//Si on appuie sur le clic de la souris (possibilité de remplacer par l'appui d'une touche)
-			if (Input.GetMouseButtonDown(0))
-			{
-				//Si le numéro de l'image qu'on est en train de lire est inférieur au nombre total d'images (si on n'est pas à la dernière)
-				if (_readingRules < _picturesRules.Length)
-				{
-					Debug.Log(_readingRules + " " + _picturesRules.Length);
+	// 	//Si on est en train de lire les règles
+	// 	if (_readingRules > 0)
+	// 	{
+	// 		//Si on appuie sur le clic de la souris (possibilité de remplacer par l'appui d'une touche)
+	// 		if (Input.GetMouseButtonDown(0))
+	// 		{
+	// 			//Si le numéro de l'image qu'on est en train de lire est inférieur au nombre total d'images (si on n'est pas à la dernière)
+	// 			if (_readingRules < _picturesRules.Length)
+	// 			{
+	// 				Debug.Log(_readingRules + " " + _picturesRules.Length);
 
-					//On désactive l'image actuelle
-					_picturesRules[_readingRules - 1].SetActive(false);
+	// 				//On désactive l'image actuelle
+	// 				_picturesRules[_readingRules - 1].SetActive(false);
 
-					//On augmente de 1 le compteur d'image de _readingRules
-					_readingRules++;
+	// 				//On augmente de 1 le compteur d'image de _readingRules
+	// 				_readingRules++;
 
-					//On active l'image suivante
-					_picturesRules[_readingRules - 1].SetActive(true);
-				}
-				else
-				{
-					Debug.Log("end " + _readingRules + " " + _picturesRules.Length);
+	// 				//On active l'image suivante
+	// 				_picturesRules[_readingRules - 1].SetActive(true);
+	// 			}
+	// 			else
+	// 			{
+	// 				Debug.Log("end " + _readingRules + " " + _picturesRules.Length);
 
-					//On désactive la dernière image
-					_picturesRules[_readingRules - 1].SetActive(false);
-					_picturesGroupRules.SetActive(false);
+	// 				//On désactive la dernière image
+	// 				_picturesRules[_readingRules - 1].SetActive(false);
+	// 				_picturesGroupRules.SetActive(false);
 
-					//On met le compteur à zéro
-					_readingRules = 0;
-				}
-			}
-		}
+	// 				//On met le compteur à zéro
+	// 				_readingRules = 0;
+	// 			}
+	// 		}
+	// 	}
 
-		/* FAIRE LA MEME CHOSE POUR LES CREDITS */
-	}
+	// 	/* FAIRE LA MEME CHOSE POUR LES CREDITS */
+	// }
 
 
 
@@ -104,16 +104,17 @@ public class Menu : MonoBehaviour
 	{
 		//Mettre entre guillemets le nom de la scène vers laquelle charger
 		//Pour utiliser SceneManager, il faut impérativement rajouter "using UnityEngine.SceneManagement;" en haut du script.
-		SceneManager.LoadScene("scene_choix_scene");
+		SceneManager.LoadScene("scene_choix_jeu");
 	}
 
 	//Fonction qui affiche la première image des règles
 	public void ReadRules()
 	{
-		Debug.Log("Règles"); //Une simple fonction pour voir lors du développement si le clic marche bien, affiche "Règles" dans la console. Peut être retiré, mais utile pour débuguer.
-		_picturesGroupRules.SetActive(true);
-		_picturesRules[0].SetActive(true);
-		_readingRules = 1;
+		SceneManager.LoadScene("scene_regle_principale");
+		// Debug.Log("Règles"); //Une simple fonction pour voir lors du développement si le clic marche bien, affiche "Règles" dans la console. Peut être retiré, mais utile pour débuguer.
+		// _picturesGroupRules.SetActive(true);
+		// _picturesRules[0].SetActive(true);
+		// _readingRules = 1;
 
 	}
 
