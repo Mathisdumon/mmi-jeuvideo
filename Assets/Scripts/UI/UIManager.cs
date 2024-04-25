@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
+        PlayerManagerFoot.game_over = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

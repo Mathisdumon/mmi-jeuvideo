@@ -9,6 +9,8 @@ public class PlayerManagerFoot : MonoBehaviour
     // public float invincibilityTime = 2.0f; // Time in seconds the player is invincible after hitting an obstacle
     // private float invincibilityTimer;
     public GameOverScreen gameOverScreen;
+
+    public GameObject objectToShowAndHide;
     public static PlayerManagerFoot instance;
     public static GameObject player;
     public int touche = 0;
