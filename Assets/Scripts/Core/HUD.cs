@@ -9,6 +9,7 @@ public class HUD : MonoBehaviour
 	[SerializeField] private GameObject deathText; //On insère l'objet texte qui affiche le nombre de morts
 	[SerializeField] private GameObject levelText; //On insère l'objet texte qui affiche le numéro du niveau
 	[SerializeField] private GameObject timerText; //On insère l'objet texte qui affiche le compteur de temps
+	[SerializeField] private GameObject scoreText;
 
 	public void updateDeathText(int nbDeath)
 	{
@@ -18,6 +19,10 @@ public class HUD : MonoBehaviour
 	public void updateLevelText(int numLevel)
 	{
 		levelText.GetComponent<TMP_Text>().text = "Niveau " + numLevel;
+	}
+	public void updateScoreText(int nbScore)
+	{
+		levelText.GetComponent<TMP_Text>().text = "Niveau " + nbScore;
 	}
 
 	public void updateTimer(float time)
