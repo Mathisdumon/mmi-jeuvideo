@@ -22,6 +22,7 @@ public class GenerateObstaclesSurf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //comment
         if (timerObstacle <= 0 && nbObstacles > 0 && !PlayerManagerSurf.game_over)
         { //Si timerObstacle est inférieur ou égal à 0, on génère un obstacle à une position y aléatoire et on remet timerObstacle = à obstacleDelay
             float departEnY = Random.Range(-4f, 4f);
