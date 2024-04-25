@@ -1232,7 +1232,7 @@ MonoBehaviour:
   medaille_or: {fileID: 564289745}
   medaille_argent: {fileID: 270225622}
   medaille_bronze: {fileID: 150629299}
-  textWinner: {fileID: 0}
+  textWinner: {fileID: 1316519475}
 --- !u!1 &1199515265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,9 +2592,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3787489805499138346, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
+      propertyPath: gold
+      value: 
+      objectReference: {fileID: 564289745}
+    - target: {fileID: 3787489805499138346, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
+      propertyPath: bronze
+      value: 
+      objectReference: {fileID: 150629299}
+    - target: {fileID: 3787489805499138346, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
+      propertyPath: silver
+      value: 
+      objectReference: {fileID: 270225622}
     - target: {fileID: 8816265120952429987, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
       propertyPath: m_Name
       value: arrived
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816265120952429987, guid: 893c09466eaac91448080e0aa61425d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
