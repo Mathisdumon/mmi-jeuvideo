@@ -69,6 +69,7 @@ public class GenerateObstaclesSurf : MonoBehaviour
         {
             Debug.Log("ici");
             GameObject ligneArrivee = Instantiate(arrived, new Vector3(8, 0, -1), Quaternion.identity);
+            ligneArrivee.SetActive(true);
             ligneArrivee.transform.parent = this.gameObject.transform; 
             timerObstacle = 100f;
             //La ligne d'arrivée est générée ?
