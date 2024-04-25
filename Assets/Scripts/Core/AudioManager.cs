@@ -9,24 +9,26 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip backgroundMusic; //Morceau du niveau
     public AudioClip damageSFX; //Effet sonore des dégâts
-	public AudioClip finishSFX; //Effet sonore des dégâts
+    public AudioClip finishSFX; //Effet sonore des dégâts
 
     void Start()
     {
-		if(musicSource != null){ //Si une musique de fond a été définie, on la joue
-			musicSource.clip = backgroundMusic; //Joue la musique de fond
-			musicSource.Play();
-		}
+        if (musicSource != null)
+        { //Si une musique de fond a été définie, on la joue
+            musicSource.clip = backgroundMusic; //Joue la musique de fond
+            musicSource.Play();
+        }
     }
 
-	//Permet de jouer un effet sonore
+    //Permet de jouer un effet sonore
     public void PlaySFX(AudioClip clip)
     {
         Debug.Log("Play");
-		SFXSource.PlayOneShot(clip);
+        SFXSource.PlayOneShot(clip);
     }
-	
-	public void StopMusic(){
-		musicSource.Stop();
-	}
+
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
 }
