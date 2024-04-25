@@ -9,16 +9,36 @@ public class BallSpawner : MonoBehaviour
     private float departEnX;
     private float departEnY;
     public int nbBallonRestant;
+    private bool partieTermineeAffichee = false;
+    private string terminer;
+    [SerializeField] UIManagerFoot uiManagerFoot;
 
     private bool ballonCreated = false;
+    // [SerializeField] private HUD hud;
+
+    // Référence au texte de "Partie Terminée"
+    // public Text textePartieTerminee;
 
     void Update()
     {
-        if (!ballonCreated && nbBallonRestant <= 9)
+        if (!ballonCreated && nbBallonRestant < 10)
         {
-            ballonCreated = true;
-            nbBallonRestant++;
             ApparaitreBallon();
+            ballonCreated = true;
+        }
+        // if (nbBallonRestant == 10)
+        // {
+        //     terminer = "Partie terminer !";
+        //     Debug.Log(terminer);
+        //     return;
+        // }
+        else if (nbBallonRestant == 10 && !partieTermineeAffichee) // Vérifier si le message n'a pas encore été affiché
+        {
+            terminer = "Partie terminée !";
+            Debug.Log(terminer);
+            uiManagerFoot.EndingGame();
+            partieTermineeAffichee = true; // Mettre à jour la variable pour indiquer que le message a été affiché
+            return;
         }
     }
 
@@ -38,4 +58,10 @@ public class BallSpawner : MonoBehaviour
     {
         ballonCreated = false;
     }
+
+    // Méthode pour afficher "Partie Terminée"
+    // void AfficherPartieTerminee()
+    // {
+    //     textePartieTerminee.gameObject.SetActive(true);
+    // }
 }

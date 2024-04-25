@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu_mimi_jeu_foot : MonoBehaviour
+public class Menu_culture : MonoBehaviour
 {
-    public void PlayGame()
+    public void MapCulture()
     {
         //Mettre entre guillemets le nom de la scène vers laquelle charger
         //Pour utiliser SceneManager, il faut impérativement rajouter "using UnityEngine.SceneManagement;" en haut du script.
-        SceneManager.LoadScene("Scene_Foot");
+        SceneManager.LoadScene("scene_map_culture");
     }
 }
