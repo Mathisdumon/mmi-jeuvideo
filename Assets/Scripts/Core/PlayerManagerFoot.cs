@@ -8,9 +8,12 @@ public class PlayerManagerFoot : MonoBehaviour
 
     // public float invincibilityTime = 2.0f; // Time in seconds the player is invincible after hitting an obstacle
     // private float invincibilityTimer;
+    public GameOverScreen gameOverScreen;
     public static PlayerManagerFoot instance;
     public static GameObject player;
     public int touche = 0;
+
+    public static bool game_over = false;
     [SerializeField] UIManager uiManager;
 
     void Awake()
@@ -51,11 +54,14 @@ public class PlayerManagerFoot : MonoBehaviour
     {
         if (other.tag == "Obstacle")
         {
-            // if (invincibilityTimer <= 0)
-            // {
             touche++;
             uiManager.UpdateText();
             Destroy(other.gameObject);
+            if(touche >= 4)
+            {
+                GameOver();
+                
+            }
             /*  invincibilityTimer = invincibilityTime;
              StartCoroutine(InvincibilityCountdown());
              } */
@@ -74,13 +80,25 @@ public class PlayerManagerFoot : MonoBehaviour
 
     void FixedUpdate()
     {
-        //On récupère si les touches de directions horizontales et verticales sont pressées, cela donne un nombre entre 0 (pas pressé) et 1 (pressé).
-        _movement.y = Input.GetAxisRaw("Vertical");
+        Debug.Log(game_over);
+        if(!game_over){
+            //On récupère si les touches de directions horizontales et verticales sont pressées, cela donne un nombre entre 0 (pas pressé) et 1 (pressé).
+            _movement.y = Input.GetAxisRaw("Vertical");
 
-        //On définit le vecteur de mouvement en fonction des données précédentes.
-        _movement = Vector2.up * _movement.normalized.y;
+            //On définit le vecteur de mouvement en fonction des données précédentes.
+            _movement = Vector2.up * _movement.normalized.y;
 
-        //Si le chronomètre n'est pas arrêté, on ajoute le laps de temps écoulé au chronomètre et on actualise le HUD
-        _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime);
+            //Si le chronomètre n'est pas arrêté, on ajoute le laps de temps écoulé au chronomètre et on actualise le HUD
+            _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime);
+        }
+        
+    }
+
+    void GameOver()
+    {
+        game_over = true;
+        uiManager.ShowGameOverScreen();
+        //get elements with tag obstacle, 
+        
     }
 }
