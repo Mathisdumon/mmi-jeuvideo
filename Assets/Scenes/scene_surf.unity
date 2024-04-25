@@ -1232,6 +1232,7 @@ MonoBehaviour:
   medaille_or: {fileID: 564289745}
   medaille_argent: {fileID: 270225622}
   medaille_bronze: {fileID: 150629299}
+  textWinner: {fileID: 0}
 --- !u!1 &1199515265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,7 +1518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1316519476
 RectTransform:
   m_ObjectHideFlags: 0
